@@ -58,7 +58,105 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     activeSize: const Size(18.0, 9.0),
     activeShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
     ),
-    )
+    ),
+        SizedBox(height: 10,),
+        Container(
+          margin: EdgeInsets.only(left:30, right: 30, ),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              BigText(text: "Popular"),
+              SizedBox(width: 10,),
+              Container(
+                margin: const EdgeInsets.only(bottom: 3),
+                child: BigText (text: ".",),
+              ),
+              Container(
+                margin: const EdgeInsets.only(bottom: 2),
+                child: smalltext(text: "foodpairing"),
+              ),
+
+
+
+
+            ],
+
+          ),
+
+        ),
+    //list of food and images
+        Container(
+          height: 700,
+          child:  ListView.builder(
+            physics: NeverScrollableScrollPhysics(),
+            shrinkWrap: true,
+              itemCount: 10,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.only(left: 20,right: 20, bottom: 10),
+                  child: Row(
+                    children: [
+                      Container(
+                        height: 120,
+                        width:120,
+
+                        decoration: BoxDecoration(
+                          //fit: BoxFit.cover,
+                          borderRadius: BorderRadius.circular(10),
+                          color: Colors.grey,
+
+                        ),
+                      ),
+                      //textcontainer
+                      Container(
+                        height: 100,
+                        width:250,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.only(
+                            topRight: Radius.circular(10),
+                            bottomRight: Radius.circular(20),
+                          ),
+                          color: Colors.white,
+                        ),
+                        child:Padding(
+                         padding: EdgeInsets.only(left: 10, right: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              BigText(text: "Nutricious fruit meal in china"),
+                              SizedBox(height: 10, width: 10,),
+                              smalltext(text: "With Chiness Characteristics"),
+                              SizedBox(height: 10, width: 10,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                children: [
+                                  IconAndTextWidget(icon: Icons.circle_sharp,
+                                      text: "Normal",
+
+                                      iconColor: Colors.blueGrey),
+                                  IconAndTextWidget(icon: Icons.location_on,
+                                      text: "1.7km",
+
+                                      iconColor: Colors.blueGrey),
+                                  IconAndTextWidget(icon: Icons.access_time_rounded,
+                                      text: "32min",
+
+                                      iconColor: Colors.blueGrey)
+
+                                ],
+                              ),
+                            ],
+                          ),
+                        ) ,
+                      )
+                    ],
+                  ),
+
+
+                );
+              }),
+        ),
 
 
 
@@ -134,6 +232,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       IconAndTextWidget(icon: Icons.circle_sharp,
                           text: "Normal",
