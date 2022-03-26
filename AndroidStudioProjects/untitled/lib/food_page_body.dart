@@ -13,7 +13,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
   Widget build(BuildContext context) {
 
     return Container(
-      color: Colors.red,
+      color: Colors.yellow,
       height: 320,
       child: PageView.builder(
           itemCount: 5,
@@ -23,22 +23,27 @@ class _FoodPageBodyState extends State<FoodPageBody> {
     );
   }
   Widget _buildpageitem(int index){
-    return Container(
-      height: 220,
-      margin: EdgeInsets.only(left: 5, right: 5),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color:index.isEven? Colors.red: Colors.white,
-        image: DecorationImage(
-          fit: BoxFit.cover,
-              image: AssetImage(
-                ""
+    return Stack(
+      children: [
+        Container(
+          height: 220,
+          margin: EdgeInsets.only(left: 5, right: 5),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+              color:index.isEven? Colors.red: Colors.yellow,
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      ""
 
+                  )
+              )
+
+
+          ),
         )
-        )
+      ],
 
-
-      ),
     );
   }
 }
