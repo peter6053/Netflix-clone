@@ -1,6 +1,7 @@
 
 import 'package:dots_indicator/dots_indicator.dart';
 import 'package:flutter/material.dart';
+import 'package:untitled/widgets/App_Column.dart';
 //import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:untitled/widgets/Big_text.dart';
 import 'package:untitled/widgets/Icon_textAnd_icons.dart';
@@ -210,47 +211,7 @@ class _FoodPageBodyState extends State<FoodPageBody> {
             ),
             child: Container(
               padding: EdgeInsets.only(top: 15, right: 15, bottom: 20),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  BigText(text: "Chinese Side"),
-                  SizedBox(height: 10,),
-                  SizedBox(height: 20,),
-
-                  Row(
-                    children: [
-                      Wrap(
-                        children: List.generate(5, (index) => Icon(Icons.star, color: Colors.green,)),
-                      ),
-                     SizedBox(width: 10,),
-                      smalltext(text: "4.5"),
-                      SizedBox(width: 10,),
-                      smalltext(text: "12345"),
-                      SizedBox(width: 10,),
-                      smalltext(text: "comments"),
-
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      IconAndTextWidget(icon: Icons.circle_sharp,
-                          text: "Normal",
-
-                          iconColor: Colors.blueGrey),
-                      IconAndTextWidget(icon: Icons.location_on,
-                          text: "1.7km",
-
-                          iconColor: Colors.blueGrey),
-                      IconAndTextWidget(icon: Icons.access_time_rounded,
-                          text: "32min",
-
-                          iconColor: Colors.blueGrey)
-
-                    ],
-                  ),
-                ],
-              ),
+              child: AppColumn(text: "Chineese side"),
             ),
 
           ),
