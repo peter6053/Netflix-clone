@@ -28,8 +28,17 @@ class PopularFoodDetails extends StatelessWidget {
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(10),
                   bottomRight: Radius.circular(20),
+
+                ),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage(
+                      "assets/foodpage.jpeg",
+
+                    )
                 ),
                 color: Colors.blue,
+
               ),
 
 
@@ -42,8 +51,8 @@ class PopularFoodDetails extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    AppIcon(icon: Icons.arrow_back_ios_new),
-                    AppIcon(icon: Icons.shopping_cart_outlined)
+                    AppIcon(icon: Icons.arrow_back_ios_new, iconcolour: Colors.lightBlueAccent,),
+                    AppIcon(icon: Icons.shopping_cart_outlined, iconcolour: Colors.lightBlueAccent,)
                   ],
               )),
           //introductionoffood
@@ -119,7 +128,9 @@ class PopularFoodDetails extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20),
                 color: Colors.lightBlueAccent
 
+
               ),
+
             )
           ],
         ),

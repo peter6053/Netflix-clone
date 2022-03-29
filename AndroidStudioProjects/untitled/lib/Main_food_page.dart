@@ -39,6 +39,7 @@ class MainFoodPage extends StatelessWidget {
                         child: const Icon(Icons.search, color: Colors.white,),
                        // child: const Icon(Icons.search),color:
                         decoration: BoxDecoration(
+
                             borderRadius: BorderRadius.circular(15),
                             color: Colors.blue
                         ))

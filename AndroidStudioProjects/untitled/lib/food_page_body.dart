@@ -103,6 +103,14 @@ class _FoodPageBodyState extends State<FoodPageBody> {
 
                         decoration: BoxDecoration(
                           //fit: BoxFit.cover,
+
+                            image: DecorationImage(
+                                fit: BoxFit.cover,
+                                image: AssetImage(
+                                  "assets/foodpage.jpeg",
+
+                                )
+                            ),
                           borderRadius: BorderRadius.circular(10),
                           color: Colors.grey,
 
@@ -177,12 +185,13 @@ class _FoodPageBodyState extends State<FoodPageBody> {
           height: 220,
           margin: EdgeInsets.only(left: 10, right: 10),
           decoration: BoxDecoration(
+
               borderRadius: BorderRadius.circular(30),
-              color:index.isEven? Colors.red: Colors.yellow,
+             // color:index.isEven? Colors.red: Colors.yellow,
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                      ""
+                      "assets/foodpage.jpeg",
 
                   )
               )
