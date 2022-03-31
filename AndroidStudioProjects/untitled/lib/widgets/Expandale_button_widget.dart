@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:untitled/utils/dimensions.dart';
+//import 'package:untitled/utils/dimensions.dart';
 import 'package:untitled/widgets/Small_Text.dart';
 
 class Expandable_Text_Widget extends StatefulWidget {

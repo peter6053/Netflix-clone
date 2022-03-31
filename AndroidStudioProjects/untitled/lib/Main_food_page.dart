@@ -14,7 +14,7 @@ class MainFoodPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            child:Center(
+            child: Center(
               child: Container(
                 margin: const EdgeInsets.only(top: 45, bottom: 45),
                 padding: EdgeInsets.only(left: 20, right: 20),
@@ -23,36 +23,38 @@ class MainFoodPage extends StatelessWidget {
                   children: [
                     Column(
                       children: [
-                        BigText(text: ("Bangladesh"),color: Colors.green, ),
+                        BigText(
+                          text: ("Bangladesh"),
+                          color: Colors.green,
+                        ),
                         Row(
                           children: [
                             smalltext(text: "njuguna"),
                             const Icon(Icons.arrow_drop_down_rounded)
                           ],
                         )
-
                       ],
                     ),
                     Container(
                         width: 45,
                         height: 45,
-                        child: const Icon(Icons.search, color: Colors.white,),
-                       // child: const Icon(Icons.search),color:
+                        child: const Icon(
+                          Icons.search,
+                          color: Colors.white,
+                        ),
+                        // child: const Icon(Icons.search),color:
                         decoration: BoxDecoration(
-
                             borderRadius: BorderRadius.circular(15),
-                            color: Colors.blue
-                        ))
+                            color: Colors.blue))
                   ],
-
-
                 ),
               ),
-            ) ,
+            ),
           ),
-         Expanded(child: SingleChildScrollView(
-           child:  FoodPageBody(),
-         )),
+          Expanded(
+              child: SingleChildScrollView(
+            child: FoodPageBody(),
+          )),
         ],
       ),
     );
