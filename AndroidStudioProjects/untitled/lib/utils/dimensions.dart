@@ -6,6 +6,7 @@ class Dimensions {
   static double pageviewContiner = screenHeight;
 
   static double font26 = screenHeight/32.46;
+  static double smallTestFont = screenHeight/16.23;
 
 
 
